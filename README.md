@@ -2,10 +2,16 @@
 A tool that's fairly useless, only really designed to annoy people.  
 **Note: It can be very easily stopped by blocking the anonymous spammer, and use will most likely get you banned from YOLO if the target reports you.**
 
+One more thing to note: This guide (and some of the files) are targeted more towards people unfamiliar with programming, so some files (such as `quick_setup.py`) are just to make the process of running `__main__.py` easier.
+
 ## Requirements
 - [**Python v3.6+**](https://www.python.org/downloads/)
 - **requests** Python module  
-  Get it by running `pip install requests` or `python -m pip install requests`.
+  Get it by running `pip install requests` or `python -m pip install requests`.  
+  **If you are unfamiliar with using the command line, there is an easier way to install the module.**
+
+### Automate module install (Windows)
+Right-click the `quick_setup.bat` file and select `Run as administrator` from the menu.  
 
 # How to use
 ## The required values
