@@ -6,7 +6,6 @@ import threading
 import urllib
 from time import sleep
 
-print(len(sys.argv))
 if len(sys.argv) == 7:
     THREAD_COUNT = int(sys.argv[1])
 else:

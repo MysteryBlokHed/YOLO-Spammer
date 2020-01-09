@@ -4,6 +4,10 @@ A tool that's fairly useless, only really designed to annoy people.
 
 One more thing to note: This guide (and some of the files) are targeted more towards people unfamiliar with programming, so some files (such as `quick_setup.py`) are just to make the process of running `__main__.py` easier.
 
+## Quickstart
+Go to the [releases page](https://github.com/MysteryBlokHed/yolo-spammer/releases) and download `YOLOSpammer.exe` to quickly run YOLO Spammer.  
+**You will still need to download [Python v3.6+](https://www.python.org/downloads/).**
+
 ## Requirements
 - [**Python v3.6+**](https://www.python.org/downloads/)
 - **requests** Python module  
