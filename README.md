@@ -4,6 +4,9 @@ A tool that's fairly useless, only really designed to annoy people.
 
 One more thing to note: This guide (and some of the files) are targeted more towards people unfamiliar with programming, so some files (such as `quick_setup.py`) are just to make the process of running `__main__.py` easier.
 
+## Run Online (Recommended for non-programmers)
+If you don't have access to a device that has Python, you can use online Python interpreters to run the code, and it'll work just fine. [Repl.it](https://repl.it/languages/python3) is one that worked in my testing. Just copy+paste [the source code](https://raw.githubusercontent.com/MysteryBlokHed/yolo-spammer/master/__main__.py) and paste it into the window on the left, then press the Run button at the top.
+
 ## Quickstart
 Go to the [releases page](https://github.com/MysteryBlokHed/yolo-spammer/releases) and download `YOLOSpammer.exe` to quickly run YOLO Spammer.  
 **You will still need to download [Python v3.6+](https://www.python.org/downloads/).**
