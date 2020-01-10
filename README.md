@@ -28,6 +28,7 @@ How many spam threads to run (Default: 50).
 A cookie is submitted with the POST request. This can really be whatever you want.  
 **YOLO ID**  
 What appears after `/m/` in the YOLO url and before the `?w=`.  
+Example: If the URL is `http://onyolo.com/m/2DmxFx7a2d?w=Honest%20opinions%3F`, the ID would be `2DmxFx7a2d`.  
 **QUESTION TO MIMIC**  
 When someone posts a YOLO, a question must be supplied. However, this question can be set in the POST request, so you can set it to whatever you want to simulate them asking.  
 **MESSAGE TO SPAM**  
