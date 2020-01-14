@@ -46,5 +46,4 @@ The command should be formatted as such when running with arguments (without the
 `THREAD COUNT` should just be an integer.  
 `ADD INTERVAL` should be `y` or `n`.
 
-After either run method, you will see output of each message spammed, and the POST status code.  
-The result status code should be **`200`**.
+After either run method, you will see what the message sent was. If the POST result code is not `200`, it will be logged.
