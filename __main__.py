@@ -1,5 +1,6 @@
 # Created by MysteryBlokHed on 29/12/2019.
 import copy
+import random
 import requests
 import sys
 import threading
@@ -13,6 +14,7 @@ else:
 
 global i
 i = 0
+text = None
 
 REQUEST_URL = "http://onyolo.com/"
 BASE_DATA = {"text": "", "cookie": "", "wording": ""}
@@ -38,10 +40,13 @@ else:
     BASE_DATA["wording"] = wording
 # Get the message to spam
 if len(sys.argv) == 7:
-    BASE_DATA["text"] = sys.argv[5]
+    text = sys.argv[5]
+    if len(text.split("|")) > 1:
+        text = text.split("|")
 else:
-    msg = input("What message would you like to spam?: ")
-    BASE_DATA["text"] = msg
+    text = input("What message would you like to spam? (To randomly select from a few, separate them with pipes |): ")
+    if len(text.split("|")) > 1:
+        text = text.split("|")
 # Interval
 if len(sys.argv) == 7:
     if sys.argv[6].lower() == "y":
@@ -55,18 +60,22 @@ else:
     else:
         unique = False
 
+random.seed()
 class Spam(threading.Thread):
     def run(self):
         global i
         while True:
             data = copy.copy(BASE_DATA)
+            if type(text) is list:
+                data["text"] = random.choice(text)
             if unique:
                 data["text"] += f" {i}"
-                i+=1
-            print(f"Sending message: {data['text']}")
+            i+=1
+            print(f"Sending message: {data['text']} (Message #{i})")
             r = requests.post(REQUEST_URL, json=data, headers=HEADERS)
-            print(f"Result: {r.status_code}")
+            if r.status_code != 200:
+                print(f"/!\ UNEXPECTED STATUS CODE: {r.status_code}")
 
-for i in range(THREAD_COUNT):
+for j in range(THREAD_COUNT):
     Spam().start()
     sleep(0.03125)
