@@ -5,7 +5,8 @@ A tool that's fairly useless, only really designed to annoy people.
 One more thing to note: This guide (and some of the files) are targeted more towards people unfamiliar with programming, so some files (such as `quick_setup.py`) are just to make the process of running `__main__.py` easier.
 
 ## Run Online (Recommended for non-programmers)
-If you don't have access to a device that has Python, you can use online Python interpreters to run the code, and it'll work just fine. [Repl.it](https://repl.it/languages/python3) is one that worked in my testing. Just copy+paste [the source code](https://raw.githubusercontent.com/MysteryBlokHed/yolo-spammer/master/__main__.py) and paste it into the window on the left, then press the Run button at the top.
+If you don't have access to a device that has Python, you can use online Python interpreters to run the code, and it'll work just fine.  
+[I've set up one that you can use](https://repl.it/@MysteryBlokHed/yolo-spammer), but if it doesn't work, just copy+paste [the source code](https://raw.githubusercontent.com/MysteryBlokHed/yolo-spammer/master/__main__.py) into any online Python interpreter you can find.
 
 ## Quickstart
 Go to the [releases page](https://github.com/MysteryBlokHed/yolo-spammer/releases) and download `YOLOSpammer.exe` to quickly run YOLO Spammer.  
@@ -23,7 +24,8 @@ Right-click the `quick_setup.bat` file and select `Run as administrator` from th
 # How to use
 ## The required values
 **THREAD COUNT (argv run only)**  
-How many spam threads to run (Default: 50).  
+How many spam threads to run (Default: 250).  
+This is how fast messages will be spammed.  
 **COOKIE**  
 A cookie is submitted with the POST request. This can really be whatever you want.  
 **YOLO ID**  
