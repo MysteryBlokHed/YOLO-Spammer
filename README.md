@@ -1,6 +1,6 @@
 # YOLO Spammer
-A tool that's fairly useless, only really designed to annoy people.  
-**Note: It can be very easily stopped by blocking the anonymous spammer, and use will most likely get you banned from YOLO if the target reports you.**
+A tool that spams someone's Snapchat YOLO's inbox.  
+**Note: The spam can be very easily stopped by using YOLO's block feature, and use of this on someone who didn't consent will most likely get you banned from YOLO if the target reports you.**
 
 One more thing to note: This guide (and some of the files) are targeted more towards people unfamiliar with programming, so some files (such as `quick_setup.py`) are just to make the process of running `__main__.py` easier.
 
