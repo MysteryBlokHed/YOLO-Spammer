@@ -26,8 +26,6 @@ Right-click the `quick_setup.bat` file and select `Run as administrator` from th
 **THREAD COUNT (argv run only)**  
 How many spam threads to run (Default: 250).  
 This is how fast messages will be spammed.  
-**COOKIE**  
-A cookie is submitted with the POST request. This can really be whatever you want.  
 **YOLO ID**  
 What appears after `/m/` in the YOLO url and before the `?w=`.  
 Example: If the URL is `http://onyolo.com/m/2DmxFx7a2d?w=Honest%20opinions%3F`, the ID would be `2DmxFx7a2d`.  
@@ -43,8 +41,8 @@ When you run `__main__.py` with no arguments, it will ask you for the values lis
 
 ## Running `__main__.py` with arguments
 The command should be formatted as such when running with arguments (without the angle brackets):  
-`python __main__.py <THREAD COUNT> <COOKIE> <YOLO ID> <QUESTION TO MIMIC> <MESSAGE(S) TO SPAM> <ADD INTERVAL>`  
-`QUESTION TO MIMIC` and `MESSAGE TO SPAM` should have double quotes around them (`"`) if they have spaces. If you want to have multiple messages to spam, separate them (in the quotes) with a pipe `|`.  
+`python __main__.py <THREAD COUNT> <YOLO ID> <QUESTION TO MIMIC> <MESSAGE(S) TO SPAM> <ADD INTERVAL>`  
+`QUESTION TO MIMIC` and `MESSAGE TO SPAM` should have double quotes around them (`"`) if they have spaces (eg. `"Ask a question"` or `"This is an answer"`). If you want to have multiple messages to spam, separate them (in the quotes) with a pipe `|` (eg. `"answer 1|answer 2|answer 3"`).  
 `THREAD COUNT` should just be an integer.  
 `ADD INTERVAL` should be `y` or `n`.
 
