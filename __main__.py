@@ -7,8 +7,6 @@ import sys
 import threading
 from time import sleep
 
-print(sys.argv)
-
 if len(sys.argv) > 1:
     THREAD_COUNT = int(sys.argv[1])
 else:
