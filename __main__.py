@@ -7,7 +7,9 @@ import sys
 import threading
 from time import sleep
 
-if len(sys.argv) == 7:
+print(sys.argv)
+
+if len(sys.argv) > 1:
     THREAD_COUNT = int(sys.argv[1])
 else:
     THREAD_COUNT = 50
@@ -22,8 +24,8 @@ BASE_DATA = {"text": "", "cookie": "", "wording": ""}
 HEADERS = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"}
 
 # Get the ID for the YOLO
-if len(sys.argv) == 7:
-    REQUEST_URL += sys.argv[3] + "/message"
+if len(sys.argv) > 2:
+    REQUEST_URL += sys.argv[2] + "/message"
 else:
     id = input("Enter the YOLO ID (What appears after '/m/' in the URL): ")
     REQUEST_URL += id + "/message"
@@ -34,14 +36,14 @@ else:
         sleep(5)
         exit()
 # Get the faked question for YOLO
-if len(sys.argv) == 7:
-    BASE_DATA["wording"] = sys.argv[4]
+if len(sys.argv) > 3:
+    BASE_DATA["wording"] = sys.argv[3]
 else:
     wording = input("Enter the question to mimic (What appears above the answer, eg. 'Honest opinions'): ")
     BASE_DATA["wording"] = wording
 # Get the message to spam
-if len(sys.argv) == 7:
-    text = sys.argv[6]
+if len(sys.argv) > 4:
+    text = sys.argv[4]
     if len(text.split("|")) > 1:
         text = text.split("|")
 else:
@@ -49,8 +51,8 @@ else:
     if len(text.split("|")) > 1:
         text = text.split("|")
 # Interval
-if len(sys.argv) == 7:
-    if sys.argv[7].lower() == "y":
+if len(sys.argv) > 5:
+    if sys.argv[5].lower() == "y":
         unique = True
     else:
         unique = False
