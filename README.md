@@ -6,7 +6,7 @@ One more thing to note: This guide (and some of the files) are targeted more tow
 
 ## Run Online (Recommended for non-programmers)
 If you don't have access to a device that has Python, you can use online Python interpreters to run the code, and it'll work just fine.  
-[I've set up one that you can use](https://repl.it/@MysteryBlokHed/YOLO-Spammer), but if it doesn't work, just copy+paste [the source code](https://raw.githubusercontent.com/MysteryBlokHed/yolo-spammer/master/__main__.py) into any online Python interpreter you can find.
+[I've set up one that you can use](https://yolo-spammer.mysteryblokhed.repl.run/), but if it doesn't work, just copy+paste [the source code](https://raw.githubusercontent.com/MysteryBlokHed/yolo-spammer/master/__main__.py) into any online Python interpreter you can find.
 
 ## Quickstart
 Go to the [releases page](https://github.com/MysteryBlokHed/yolo-spammer/releases) and download `YOLOSpammer.exe` to quickly run YOLO Spammer.  
