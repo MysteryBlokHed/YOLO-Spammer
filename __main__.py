@@ -53,17 +53,14 @@ else:
         text = text.split("|")
 
 # Interval
+unique = False
 if len(sys.argv) > 5:
     if sys.argv[5].lower() == "y":
         unique = True
-    else:
-        unique = False
 else:
     unique = input("Add interval to keep all messages different? [y/N]: ")
     if unique.lower() == "y":
         unique = True
-    else:
-        unique = False
 
 random.seed()
 class Spam(threading.Thread):
@@ -74,8 +71,13 @@ class Spam(threading.Thread):
 
             # Set the cookie
             data["cookie"] = "".join(random.choices(string.ascii_lowercase + string.digits, k=22))
+
+            # Set text
+            data["text"] = text
             if type(text) is list:
                 data["text"] = random.choice(text)
+
+            # Add an incrementing number to each message if enabled
             if unique:
                 data["text"] += f" {i}"
             i+=1
@@ -83,6 +85,7 @@ class Spam(threading.Thread):
             print(f"Sending message: {data['text']} (Message #{i})")
             r = requests.post(REQUEST_URL, json=data, headers=HEADERS)
 
+            # Log any unexpected errors
             if r.status_code != 200:
                 print(f"/!\\ UNEXPECTED STATUS CODE: {r.status_code}")
                 print(r.content)
