@@ -1,4 +1,7 @@
 # YOLO Spammer
+
+**This software no longer works. YOLO has added [reCAPTCHA v3](https://developers.google.com/recaptcha/docs/v3), which prevents spamming YOLO in the way that this tool does. It's likely still possible to make a spammer, but it will have to be executed differently.**
+
 A tool that spams someone's Snapchat YOLO's inbox.  
 **Note: The spam can be very easily stopped by using YOLO's block feature, and use of this on someone who didn't consent will most likely get you banned from YOLO if the target reports you.**
 
